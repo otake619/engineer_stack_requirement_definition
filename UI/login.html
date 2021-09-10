@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./css/login.css">
-    <title>ログイン画面</title>
+    <title>新規登録</title>
 </head>
 <body>
     <section class="header">
@@ -56,27 +56,43 @@
                     転職への熱意や知識量、学習量を伝えることができます。
                 </p>
             </div>
+            <hr class="has-text-white">
             <div class="form">
                 <div class="m-5">
-                    <h4 class="has-text-white">ログイン情報を入力してください。</h4>
-                    <div class="field is-horizontal">
-                        <div class="field-label is-normal">
-                            <label class="label has-text-white">アカウント名</label>
+                    <div class="columns">
+                        <div class="column">
+                            <h4 class="has-text-white">登録項目を入力してください。</h4>
+                            <label for="name" class="has-text-white"><span class="has-text-danger">*必須 </span>アカウント名</label>
+                            <input class="input" id="name" type="text" placeholder="stack.json">
+                            <label for="email" class="has-text-white"><span class="has-text-danger">*必須 </span>メールアドレス</label>
+                            <input class="input" id="email" type="email" placeholder="engineer@stack.com">
+                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 </span>パスワード</label>
+                            <input class="input" id="password" type="password" placeholder="********">
+                            <input type="submit" class="button is-primary is-light mt-5" value="アカウント作成">
                         </div>
-                        <div class="field-body">
-                            <div class="field">
-                                <p class="control">
-                                    <input class="input" type="email" placeholder="Mark Json">
-                                </p>
-                            </div>
-                        </div>
+                        <div class="column"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="footer">
-
+        <div class="columns">
+            <div class="column">
+                <a class="navbar-item is-size-5 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <span class="m-3">&copy;otake619 2021</span>
+            </div>
+            <div class="column m-3">
+                <p class="mb-3">EngineerStack</p>
+                <a class="has-text-primary" href="">About</a><br>
+                <a class="has-text-primary" href="">利用規約</a><br>
+                <a class="has-text-primary" href="">リリース</a><br>
+                <a class="has-text-primary" href="">プライバシー</a><br>
+                <a class="has-text-primary" href="">ご意見</a>
+            </div>
+        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script>
