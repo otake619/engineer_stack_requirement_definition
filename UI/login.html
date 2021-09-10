@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>ログイン画面</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>アカウント作成</strong>
+                            </a>
+                            <a class="button is-light">
+                                ログイン
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="content">
+        <div class="has-background-primary is-full m-5 p-5">
+            <div class="introduction">
+                <h4 class="has-text-white is-size-4 ml-5">EngineerStack(エンジニアスタック)とは？</h4>
+                <p class="has-text-white is-size-5 ml-5">
+                    EngineerStackは、エンジニア向けのメモです。<br>
+                    つまづいた点をメモとして蓄積することで、<br>
+                    再び同じエラーに遭遇した際にメモを参照するだけで<br>
+                    解決します。
+                </p>
+                <h4 class="has-text-white is-size-4 mt-5 ml-5">このような使い方もできます！</h4>
+                <p class="has-text-white is-size-5 mt-5 ml-5">
+                    EngineerStackには、蓄積したメモをCSV形式で<br>
+                    出力する機能を備えています。<br>
+                    転職の際に表計算ソフトにまとめて、<br>
+                    採用担当者に提出することで、ご自身の<br>
+                    転職への熱意や知識量、学習量を伝えることができます。
+                </p>
+            </div>
+            <div class="form">
+                <div class="m-5">
+                    <h4 class="has-text-white">ログイン情報を入力してください。</h4>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label has-text-white">アカウント名</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input" type="email" placeholder="Mark Json">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(".navbar-burger").click(function() {
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+        });
+    </script>
+</body>
+</html>
