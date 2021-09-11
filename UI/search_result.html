@@ -6,9 +6,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./css/account.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>ログ検索</title>
 </head>
 <body>
+    <section class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <div class="field mt-4 ml-5">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="キーワードを入力">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <i class="fas fa-pen"></i><strong>記録</strong>
+                            </a>
+                            <a class="button is-light">
+                                ログアウト
+                            </a>
+                            <a class="image">
+                                <img class="is-rounded" src="./images/pig.png" alt="アイコン">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="content">
+        <h4 class="title has-text-centered m-5">「php MVC」での検索結果: 5件</h4>
+        <div class="columns">
+            <div class="box column m-3">
+                <div class="category">
+                    <span class="tag is-primary">つまづきポイント</span>
+                    <span class="tag is-primary">ログ</span>
+                    <span class="tag is-primary">思考プロセス</span>
+                    <span class="tag is-primary">php</span>
+                    <span class="tag is-primary">Laravel</span>
+                    <span class="tag is-primary">MVC</span>
+                </div>
+                <hr>
+                <div class="title">
+                    <h4 class="is-size-5 has-text-weight-bold"><span class="has-text-info">MVC</span>でわからなかったところ</h4>
+                </div>
+                <div class="post-time">
+                    <p>5日前投稿</p>
+                </div>
+            </div>
+            <div class="box column m-3">
+                <div class="category">
+                    <span class="tag is-primary">つまづきポイント</span>
+                    <span class="tag is-primary">ログ</span>
+                    <span class="tag is-primary">思考プロセス</span>
+                    <span class="tag is-primary">php</span>
+                    <span class="tag is-primary">Laravel</span>
+                    <span class="tag is-primary">MVC</span>
+                </div>
+                <hr>
+                <div class="title">
+                    <h4 class="is-size-5 has-text-weight-bold"><span class="has-text-info">MVC</span>でわからなかったところ</h4>
+                </div>
+                <div class="post-time">
+                    <p>5日前投稿</p>
+                </div>
+            </div>
+            <div class="box column m-3">
+                <div class="category">
+                    <span class="tag is-primary">つまづきポイント</span>
+                    <span class="tag is-primary">ログ</span>
+                    <span class="tag is-primary">思考プロセス</span>
+                    <span class="tag is-primary">php</span>
+                    <span class="tag is-primary">Laravel</span>
+                    <span class="tag is-primary">MVC</span>
+                </div>
+                <hr>
+                <div class="title">
+                    <h4 class="is-size-5 has-text-weight-bold"><span class="has-text-info">php</span>でわからなかったところ</h4>
+                </div>
+                <div class="post-time">
+                    <p>5日前投稿</p>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="box column m-3">
+                <div class="category">
+                    <span class="tag is-primary">つまづきポイント</span>
+                    <span class="tag is-primary">ログ</span>
+                    <span class="tag is-primary">思考プロセス</span>
+                    <span class="tag is-primary">php</span>
+                    <span class="tag is-primary">Laravel</span>
+                    <span class="tag is-primary">MVC</span>
+                </div>
+                <hr>
+                <div class="title">
+                    <h4 class="is-size-5 has-text-weight-bold"><span class="has-text-info">php</span>でわからなかったところ</h4>
+                </div>
+                <div class="post-time">
+                    <p>5日前投稿</p>
+                </div>
+            </div>
+            <div class="box column m-3">
+                <div class="category">
+                    <span class="tag is-primary">つまづきポイント</span>
+                    <span class="tag is-primary">ログ</span>
+                    <span class="tag is-primary">思考プロセス</span>
+                    <span class="tag is-primary">php</span>
+                    <span class="tag is-primary">Laravel</span>
+                    <span class="tag is-primary">MVC</span>
+                </div>
+                <hr>
+                <div class="title">
+                    <h4 class="is-size-5 has-text-weight-bold"><span class="has-text-info">MVC</span>でわからなかったところ</h4>
+                </div>
+                <div class="post-time">
+                    <p>5日前投稿</p>
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+    </section>
+    <section class="advertisement">
+        <p class="is-size-2 has-text-centered">広告を貼る予定の位置</p>
+    </section>
+    <section class="footer">
+        <div class="columns">
+            <div class="column">
+                <a class="navbar-item is-size-5 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <span class="m-3">&copy;otake619 2021</span>
+            </div>
+            <div class="column m-3">
+                <p class="mb-3">EngineerStack</p>
+                <a class="has-text-primary" href="">About</a><br>
+                <a class="has-text-primary" href="">利用規約</a><br>
+                <a class="has-text-primary" href="">リリース</a><br>
+                <a class="has-text-primary" href="">プライバシー</a><br>
+                <a class="has-text-primary" href="">ご意見</a>
+            </div>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
