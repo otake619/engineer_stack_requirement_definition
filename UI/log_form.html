@@ -50,62 +50,27 @@
         </nav>
     </section>
     <section class="content">
-        <div class="title m-5">
-            <h4 class="is-size-3 has-text-centered">メモを追加する場合はボタンをクリック！</h4>
-        </div>
         <div class="add-inputs">
             <div class="columns">
                 <div class="column"></div>
                 <div class="column is-three-fifths">
+                    <div class="title mt-5">
+                        <h4 class="is-size-4">記録する</h4>
+                    </div>
                     <div class="field">
-                        <label for="category"><span class="has-text-danger">*必須 </span>カテゴリ <span class="has-text-danger">最大5個まで</span><br><span>記入例:「php, Laravel」のように半角カンマ区切りで入力してください。</span></label>
-                        <div class="control has-text-centered">
-                            <input class="input is-rounded" id="category" type="text" placeholder="カテゴリ"><br>
-                        </div>
-                    </div>
-                    <button class="button is-primary is-rounded m-3" id="show_comment">
-                        <p class="is-size-4">自由コメントを追加</p>
-                    </button><br>
-                    <div class="field" id="comment_field">
-                        <label for="comment"><span>*任意 </span>自由コメント <span class="has-text-danger">*最大1000文字まで</span></label>
+                        <label for="comment">メモ<br><span class="has-text-danger">*必須 最大2000文字まで</span></label><br>
+                        <span class="has-text-primary" id="count_text">残り2000文字入力可能</span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
-                                    <textarea id="comment" class="textarea is-primary" type="text" placeholder="自由コメント"></textarea>
+                                    <textarea id="memo" class="textarea is-primary" type="text" placeholder="メモを入力" rows="20"></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="button is-primary is-rounded m-3">
-                        <p class="is-size-4" id="show_trouble">つまづきを追加</p>
-                    </button><br>
-                    <div class="field" id="trouble_field">
-                        <label for="comment"><span>*任意 </span>つまづき <span class="has-text-danger">*最大1000文字まで</span></label>
-                        <div class="control has-text-centered">
-                            <div class="field">
-                                <div class="control">
-                                    <textarea class="textarea is-primary" type="text" placeholder="自由コメント"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="button is-primary is-rounded m-3">
-                        <p class="is-size-4">解決策を追加</p>
-                    </button><br>
-                    <div class="field">
-                        <label for="comment"><span>*任意 </span>解決策 <span class="has-text-danger">*最大1000文字まで</span></label>
-                        <div class="control has-text-centered">
-                            <div class="field">
-                                <div class="control">
-                                    <textarea class="textarea is-primary" type="text" placeholder="自由コメント"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="button is-primary is-rounded m-3">
-                        <p class="is-size-4">画像を追加</p>
-                    </button><br>
-                    <div class="file has-name">
+                    <span class="mt-5">画像</span>
+                    <p>*任意<span class="has-text-danger"> -.-MBまでの画像(.jpeg, .ping)をアップロード可能</span></p>
+                    <div class="file has-name mb-5" id="image_field">
                         <label class="file-label">
                             <input class="file-input" type="file" name="resume">
                             <span class="file-cta">
@@ -121,7 +86,7 @@
                             </span>
                         </label>
                     </div>
-                    <button class="button is-info is-rounded m-3">
+                    <button class="button is-info is-rounded m-2">
                         <p class="is-size-4">保存</p>
                     </button>
                 </div>
@@ -130,7 +95,7 @@
         </div>
     </section>
     <section class="advertisement">
-        <p class="is-size-2 has-text-centered">広告を貼る予定の位置</p>
+        <img src="./images/advertise.jpg" alt="広告">
     </section>
     <section class="footer">
         <div class="columns">

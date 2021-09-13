@@ -1,9 +1,5 @@
-let isOpenComment = false;
-let isOpenTrouble = false;
-
 window.addEventListener('load', () => {
-    $("#comment_field").hide();
-    $("#trouble_field").hide();
+    
 });
 
 $(function() {
@@ -12,29 +8,18 @@ $(function() {
         $(".navbar-menu").toggleClass("is-active");
     });
     
-    $('#show_comment').on('click', function() {
-        isOpenComment = !isOpenComment;
-        showComment(isOpenComment);
-    });
+    $("#memo").keyup(function(){
+        let count = $(this).val().length;
+        let remain = 2000 - count;
+        let text;
 
-    $('#show_trouble').on('click', function() {
-        isOpenTrouble = !isOpenTrouble;
-        showTrouble(isOpenTrouble);
+        if(remain >= 0) {
+            text = "残り" + remain + "文字入力可能";
+        } else {
+            let over = Math.abs(remain);
+            text = over + "文字超過";
+        }
+        
+        $('#count_text').text(text);
     });
 });
-
-function showComment(isOpenComment) {
-    if(isOpenComment) {
-        $("#comment_field").show();
-    } else {
-        $("#comment_field").hide();
-    }
-}
-
-function showTrouble(isShowTrouble) {
-    if(isShowTrouble) {
-        $("#trouble_field").show();
-    } else {
-        $("#trouble_field").hide();
-    }
-}
