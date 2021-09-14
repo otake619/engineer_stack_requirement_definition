@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="./css/register.css">
     <title>新規登録</title>
 </head>
@@ -37,36 +38,48 @@
             </div>
         </nav>
     </section>
-    <section class="content">
-        <div class="has-background-primary is-full m-5 p-5">
-            <div class="introduction">
-                <h4 class="has-text-white is-size-4 ml-5">EngineerStack(エンジニアスタック)とは？</h4>
-                <p class="has-text-white is-size-5 ml-5">
-                    EngineerStackは、エンジニア向けのメモです。<br>
-                    つまづいた点をメモとして蓄積することで、<br>
-                    再び同じエラーに遭遇した際にメモを参照するだけで<br>
-                    解決します。
-                </p>
-                <h4 class="has-text-white is-size-4 mt-5 ml-5">このような使い方もできます！</h4>
-                <p class="has-text-white is-size-5 mt-5 ml-5">
-                    EngineerStackには、蓄積したメモをCSV形式で<br>
-                    出力する機能を備えています。<br>
-                    転職の際に表計算ソフトにまとめて、<br>
-                    採用担当者に提出することで、ご自身の<br>
-                    転職への熱意や知識量、学習量を伝えることができます。
-                </p>
-            </div>
-            <hr class="has-text-white">
+    <section class="content has-background-primary m-5 p-5">
+        <div class="introduction">
+            <div class="columns">
+                <div class="column">
+                </div>
+                <div class="column is-three-fifths">
+                    <div class="introduction">
+                        <h4 class="has-text-white is-size-4 ml-5">EngineerStack(エンジニアスタック)とは？</h4>
+                        <p class="has-text-white is-size-5 ml-5">
+                            EngineerStackは、エンジニア向けのメモです。
+                            つまづいた点をメモとして蓄積することで、
+                            再び同じエラーに遭遇した際にメモを参照するだけで
+                            解決します。
+                        </p>
+                        <h4 class="has-text-white is-size-4 mt-5 ml-5">このような使い方もできます！</h4>
+                        <p class="has-text-white is-size-5 mt-5 ml-5">
+                            EngineerStackには、蓄積したメモをCSV形式で
+                            出力する機能を備えています。
+                            転職の際に表計算ソフトにまとめて、
+                            採用担当者に提出することで、ご自身の
+                            転職への熱意や知識量、学習量を伝えることができます。
+                        </p>
+                    </div>
+                    <hr>
+                </div>
+                <div class="column">
+                </div>
+            </div>   
             <div class="form">
                 <div class="m-5">
                     <div class="columns">
                         <div class="column">
+                        </div>
+                        <div class="column is-three-fifths">
                             <h4 class="has-text-white">登録項目を入力してください。</h4>
-                            <label for="name" class="has-text-white"><span class="has-text-danger">*必須 </span>アカウント名</label>
+                            <label for="name" class="has-text-white"><span class="has-text-danger">*必須 40文字以内 </span>アカウント名</label>
                             <input class="input" id="name" type="text" placeholder="stack.json">
                             <label for="email" class="has-text-white"><span class="has-text-danger">*必須 </span>メールアドレス</label>
                             <input class="input" id="email" type="email" placeholder="engineer@stack.com">
-                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 </span>パスワード</label>
+                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 8-20文字半角英数字 </span>パスワード</label>
+                            <input class="input" id="password" type="password" placeholder="********">
+                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 </span>パスワード(確認用)</label>
                             <input class="input" id="password" type="password" placeholder="********">
                             <label class="checkbox has-text-white mt-3">
                                 <input type="checkbox">
@@ -74,7 +87,8 @@
                             </label><br>
                             <input type="submit" class="button is-primary is-light mt-5" value="アカウント作成">
                         </div>
-                        <div class="column"></div>
+                        <div class="column">
+                        </div>
                     </div>
                 </div>
             </div>

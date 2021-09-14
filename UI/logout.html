@@ -5,10 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="./css/account.css">
     <title>ログアウト</title>
 </head>
 <body>
+    <section class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <div class="field mt-4 ml-5">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="キーワードを入力">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>アカウント作成</strong>
+                            </a>
+                            <a class="button is-light">
+                                ログイン
+                            </a>
+                            <a class="image">
+                                <img class="is-rounded" src="./images/pig.png" alt="アイコン">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class="message">
+        <div class="has-background-primary m-5 p-5">
+            <div class="columns">
+                <div class="column">
+                </div>
+                <div class="column is-three-fifths ml-5">
+                    <h4 class="has-text-white has-text-weight-semibold">ログアウトしました。</h4>
+                </div>
+                <div class="column">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content has-background-primary m-5 p-5">
+        <div class="form">
+            <div class="form">
+                <div class="m-5">
+                    <div class="columns">
+                        <div class="column">
+                        </div>
+                        <div class="column is-three-fifths">
+                            <h4 class="has-text-white">ご登録情報を入力してください。</h4>
+                            <label for="email" class="has-text-white"><span class="has-text-danger">*必須 </span>メールアドレス</label>
+                            <input class="input" id="email" type="email" placeholder="engineer@stack.com">
+                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 </span>パスワード</label>
+                            <input class="input" id="password" type="password" placeholder="********">
+                            <input type="submit" class="button is-primary is-light mt-5" value="ログイン">
+                        </div>
+                        <div class="column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advertisement">
+        <img src="./images/advertise.jpg" alt="広告">
+    </section>
+    <section class="footer">
+        <div class="columns">
+            <div class="column">
+                <a class="navbar-item is-size-5 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+                <span class="m-3">&copy;otake619 2021</span>
+            </div>
+            <div class="column m-3">
+                <p class="mb-3">EngineerStack</p>
+                <a class="has-text-primary" href="">About</a><br>
+                <a class="has-text-primary" href="">利用規約</a><br>
+                <a class="has-text-primary" href="">リリース</a><br>
+                <a class="has-text-primary" href="">プライバシー</a><br>
+                <a class="has-text-primary" href="">ご意見</a>
+            </div>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
