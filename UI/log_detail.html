@@ -55,7 +55,7 @@
             </div>
             <div class="column is-three-fifths has-background-white p-5">
                 <div class="bookmark has-text-right">
-                    <a href=""><i class="fas fa-star is-size-2"></i></a>
+                    <a href=""><i class="far fa-bookmark is-size-2"></i></a>
                 </div>
                 <div class="created_at">
                     <span>2021年09月14日に作成</span>
@@ -77,6 +77,52 @@
                         <figure class="image is-256x256">
                             <img src="./images/mvc.png" alt="参考画像">
                         </figure>
+                    </div>
+                    <div class="settings has-text-right mt-4">
+                        <div class="dropdown">
+                            <div class="dropdown-trigger">
+                                <button id="settings" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                    <span><i class="fas fa-cog"></i>設定</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item has-text-left">
+                                        <span>メモを編集する</span>
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a id="delete_memo" href="#" class="dropdown-item has-text-left">
+                                        <span class="has-text-danger">メモを削除する</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                            <div class="column is-three-fifths">
+                                <div class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content">
+                                        <div class="confirm">
+                                            <header class="modal-card-head">
+                                                <p class="modal-card-title has-text-danger has-text-left mt-5">このメモを削除しますが、本当によろしいですか？</p>
+                                                <button class="delete" aria-label="close"></button>
+                                            </header>
+                                            <footer class="modal-card-foot">
+                                                <button class="button is-danger"><i class="fas fa-trash-alt"></i>削除</button>
+                                                <button id="modal-close" class="button">キャンセル</button>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,13 +152,6 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $(".navbar-burger").click(function() {
-                $(".navbar-burger").toggleClass("is-active");
-                $(".navbar-menu").toggleClass("is-active");
-            });
-        });
-    </script>
+    <script src="./js/log_detail.js"></script>
 </body>
 </html>
