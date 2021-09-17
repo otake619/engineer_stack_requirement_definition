@@ -55,6 +55,19 @@
                 <h4 class="is-size-3 has-text-white">マイアカウント</h4>
             </div>
         </div>
+        <div class="category-ratio">
+            <div class="columns">
+                <div class="column">
+                </div>
+                <div class="column is-three-fifths">
+                    <div class="category-chart">
+                        <canvas id="myPieChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                <div class="column">
+                </div>
+            </div>
+        </div>
         <div class="columns">
             <div class="column">
             </div>
@@ -75,7 +88,7 @@
                         <div class="control">
                             <div class="field"> 
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトル" value="engineer.com" readonly>
+                                    <input type="text" class="input" placeholder="タイトル" value="engineer.com" readonly>
                                     <a href="">メールアドレスを変更する場合はこちら</a>
                                 </div>
                             </div>
@@ -86,7 +99,7 @@
                         <div class="control">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトル" value="*********">
+                                    <input type="text" class="input" placeholder="タイトル" value="*********">
                                     <span class="has-text-dark has-text-left">*セキュリティ保護のため表示しておりません</span><br>
                                     <a href="">パスワードを変更する場合はこちら</a>
                                 </div>
@@ -119,12 +132,36 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script>
         $(document).ready(function() {
             $(".navbar-burger").click(function() {
                 $(".navbar-burger").toggleClass("is-active");
                 $(".navbar-menu").toggleClass("is-active");
             });
+        });
+
+        var ctx = document.getElementById("myPieChart");
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+            labels: ["php", "Laravel", "MVC", "その他"],
+            datasets: [{
+                backgroundColor: [
+                    "#BB5179",
+                    "#FAFF67",
+                    "#58A27C",
+                    "#3C00FF"
+                ],
+                data: [38, 31, 21, 10]
+            }]
+            },
+            options: {
+            title: {
+                display: true,
+                text: 'カテゴリー 割合'
+            }
+            }
         });
     </script>
 </body>
