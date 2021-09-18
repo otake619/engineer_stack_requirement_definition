@@ -50,35 +50,38 @@
         </nav>
     </section>
     <section class="content">
-        <div class="title has-background-primary">
-            <div class="has-text-centered">
+        <div class="title">
+            <div class="has-text-centered has-background-primary">
                 <h4 class="is-size-3 has-text-white">マイアカウント</h4>
             </div>
         </div>
-        <div class="category-ratio">
+        <div class="category-ratio m-5">
             <div class="columns">
                 <div class="column">
                 </div>
-                <div class="column is-three-fifths">
-                    <div class="category-chart">
-                        <canvas id="myPieChart" width="400" height="400"></canvas>
-                    </div>
+                <div class="column is-three-fifths p-5">
+                    <h4 class="title is-size-5">投稿カテゴリー比率</h4>
+                    <p>php: 60%</p>
+                    <p>つまづきポイント: 15%</p>
+                    <p>Laravel: 10%</p>
+                    <p>その他: 15%</p>
                 </div>
                 <div class="column">
                 </div>
             </div>
         </div>
-        <div class="columns">
+        <div class="columns m-5">
             <div class="column">
             </div>
             <div class="column is-three-fifths">
                 <div class="form">
                     <div class="field">
+                        <h4 class="title is-size-5">登録情報</h4>
                         <label for="comment">アカウント名<br><span class="has-text-danger">*必須 最大30文字まで</span></label><br>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトル" value="Engineer.Jhon">
+                                    <input type="text" class="input is-success" placeholder="タイトル" value="Engineer.John">
                                 </div>
                             </div>
                         </div>
@@ -106,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="button is-primary" value="変更する">
+                    <input type="submit" class="button is-primary" value="アカウント名を変更する">
                 </div>
             </div>
             <div class="column">
@@ -132,36 +135,12 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script>
         $(document).ready(function() {
             $(".navbar-burger").click(function() {
                 $(".navbar-burger").toggleClass("is-active");
                 $(".navbar-menu").toggleClass("is-active");
             });
-        });
-
-        var ctx = document.getElementById("myPieChart");
-        var myPieChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-            labels: ["php", "Laravel", "MVC", "その他"],
-            datasets: [{
-                backgroundColor: [
-                    "#BB5179",
-                    "#FAFF67",
-                    "#58A27C",
-                    "#3C00FF"
-                ],
-                data: [38, 31, 21, 10]
-            }]
-            },
-            options: {
-            title: {
-                display: true,
-                text: 'カテゴリー 割合'
-            }
-            }
         });
     </script>
 </body>
