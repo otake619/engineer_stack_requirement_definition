@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="./css/register.css">
-    <title>新規登録</title>
+    <title>お問い合わせ</title>
 </head>
 <body>
     <section class="header">
@@ -38,59 +38,66 @@
             </div>
         </nav>
     </section>
-    <section class="content has-background-primary m-5 p-5">
-        <div class="introduction">
-            <div class="columns">
-                <div class="column">
-                </div>
-                <div class="column is-three-fifths">
-                    <div class="introduction">
-                        <h4 class="has-text-white is-size-4 ml-5">EngineerStack(エンジニアスタック)とは？</h4>
-                        <p class="has-text-white is-size-5 ml-5">
-                            EngineerStackは、エンジニア向けのメモです。
-                            つまづいた点をメモとして蓄積することで、
-                            再び同じエラーに遭遇した際にメモを参照するだけで
-                            解決します。
-                        </p>
-                        <h4 class="has-text-white is-size-4 mt-5 ml-5">このような使い方もできます！</h4>
-                        <p class="has-text-white is-size-5 mt-5 ml-5">
-                            EngineerStackには、蓄積したメモをCSV形式で
-                            出力する機能を備えています。
-                            転職の際に表計算ソフトにまとめて、
-                            採用担当者に提出することで、ご自身の
-                            転職への熱意や知識量、学習量を伝えることができます。
-                        </p>
-                    </div>
-                    <hr>
-                </div>
-                <div class="column">
-                </div>
-            </div>   
-            <div class="form">
-                <div class="m-5">
-                    <div class="columns">
-                        <div class="column">
-                        </div>
-                        <div class="column is-three-fifths">
-                            <h4 class="has-text-white">登録項目を入力してください。</h4>
-                            <label for="name" class="has-text-white"><span class="has-text-danger">*必須 40文字以内 </span>アカウント名</label>
-                            <input class="input" id="name" type="text" placeholder="stack.json">
-                            <label for="email" class="has-text-white"><span class="has-text-danger">*必須 </span>メールアドレス</label>
-                            <input class="input" id="email" type="email" placeholder="engineer@stack.com">
-                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 8-20文字半角英数字 </span>パスワード</label>
-                            <input class="input" id="password" type="password" placeholder="********">
-                            <label for="password" class="has-text-white"><span class="has-text-danger">*必須 </span>パスワード(確認用)</label>
-                            <input class="input" id="password" type="password" placeholder="********">
-                            <label class="checkbox has-text-white mt-3">
-                                <input type="checkbox">
-                                <a href="#">利用規約</a>に同意する
-                            </label><br>
-                            <input type="submit" class="button is-primary is-light mt-5" value="アカウント作成">
-                        </div>
-                        <div class="column">
+    <section class="content">
+        <div class="title has-background-primary has-text-centered">
+            <h4 class="is-size-3 has-text-white">お問い合わせ</h4>
+        </div>
+        <div class="columns">
+            <div class="column">
+            </div>
+            <div class="column is-three-fifths p-5">
+                <div class="form">
+                    <div class="field">
+                        <label for="comment">お名前 <br><span class="has-text-danger">*必須</span></label>
+                        <div class="control">
+                            <div class="field"> 
+                                <div class="control">
+                                    <input type="text" class="input" placeholder="氏名を入力">
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="field">
+                        <label for="comment">メールアドレス <br><span class="has-text-danger">*必須</span></label>
+                        <div class="control">
+                            <div class="field"> 
+                                <div class="control">
+                                    <input type="text" class="input" placeholder="メールアドレスを入力">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="comment">ご相談種別 <br><span class="has-text-danger">*必須</span></label>
+                        <div class="control">
+                            <div class="field"> 
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option>選択してください</option>
+                                            <option>本アプリへのご要望</option>
+                                            <option>本アプリへの苦情</option>
+                                            <option>その他</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="comment">お問い合わせ内容<br><span class="has-text-danger">*必須</span></label><br>
+                        <div class="control has-text-centered">
+                            <div class="field">
+                                <div class="control">
+                                    <textarea id="memo" class="textarea" type="text" placeholder="お問い合わせ内容を入力" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input class="button is-primary" type="submit" value="送信">
                 </div>
+            </div>
+            <div class="column">
             </div>
         </div>
     </section>
@@ -107,11 +114,10 @@
             </div>
             <div class="column m-3">
                 <p class="mb-3">EngineerStack</p>
-                <a class="has-text-primary" href="">About</a><br>
                 <a class="has-text-primary" href="">利用規約</a><br>
                 <a class="has-text-primary" href="">リリース</a><br>
-                <a class="has-text-primary" href="">プライバシー</a><br>
-                <a class="has-text-primary" href="">ご意見</a>
+                <a class="has-text-primary" href="">プライバシーポリシー</a><br>
+                <a class="has-text-primary" href="">お問い合わせ</a>
             </div>
         </div>
     </section>
