@@ -71,18 +71,18 @@
                     </div>
                     <div class="field">
                         <label for="comment">タイトル<br><span class="has-text-danger">*必須 最大100文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_text">残り100文字入力可能</span>
+                        <span class="has-text-primary" id="count_title">残り100文字入力可能</span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトルを入力">
+                                    <input type="text" id="title" class="input is-success" placeholder="タイトルを入力">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="field">
                         <label for="comment">メモ<br><span class="has-text-danger">*必須 最大2000文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_text">残り2000文字入力可能</span>
+                        <span class="has-text-primary" id="count_memo">残り2000文字入力可能</span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
@@ -92,10 +92,11 @@
                         </div>
                     </div>
                     <span class="mt-5">画像</span>
-                    <p>*任意<span class="has-text-danger"> -.-MBまでの画像(JPEG形式, PNG形式)をアップロード可能</span></p>
-                    <div class="file has-name mb-5" id="image_field">
+                    <p>*任意<span class="has-text-danger"> -.-MBまでの画像(JPEG形式, PNG形式, PDF形式)をアップロード可能</span></p>
+                    <span id="filesize"></span>
+                    <div class="file has-name mb-5" id="file_field">
                         <label class="file-label">
-                            <input class="file-input" type="file" name="resume">
+                            <input id="file" class="file-input" type="file" name="resume" accept=".jpg, .jpeg, .png, .pdf">
                             <span class="file-cta">
                                 <span class="file-icon">
                                     <i class="fas fa-upload"></i>
@@ -104,7 +105,7 @@
                                     画像を選択
                                 </span>
                             </span>
-                            <span class="file-name">
+                            <span id="file_name" class="file-name">
                                 画像を選択してください
                             </span>
                         </label>

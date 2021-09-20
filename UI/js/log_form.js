@@ -3,21 +3,6 @@ $(function() {
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
     });
-    
-    $("#memo").keyup(function() {
-        let count = $(this).val().length;
-        let remain = 2000 - count;
-        let text;
-
-        if(remain >= 0) {
-            text = "残り" + remain + "文字入力可能";
-        } else {
-            let over = Math.abs(remain);
-            text = over + "文字超過";
-        }
-        
-        $('#count_text').text(text);
-    });
 
     $("#category").keyup(function() {
         const separator = ",";
@@ -27,8 +12,32 @@ $(function() {
         let dispText = arrayToText(textToArray);
         $("#disp_category").text(dispText);
     })
+
+    $("#title").keyup(function() {
+        const id = "#count_title";
+        let limit = 100;
+        let countTitle = $(this).val().length;
+        countText(id, limit, countTitle);
+    });
+
+    $("#memo").keyup(function() {
+        const id = "#count_memo";
+        let limit = 2000;
+        let countMemo = $(this).val().length;
+        countText(id, limit, countMemo);
+    });
+
+    $("#file").change(function() {
+        let fileData = this.files[0];
+        let fileSize = getFileSize(fileData);
+        let fileName = getFileName(fileData);
+        console.log(fileData.type);
+        console.log(fileSize);
+        console.log(fileName);
+    });
 });
 
+//カテゴリの関数
 function separateText(separator, text) {
     let splitText = text.split(separator);
     return splitText;
@@ -79,7 +88,31 @@ function checkElement(array) {
     countCategory(array);
     return array;
 }
+//ここまで
 
+//タイトルとメモの関数
+function countText(id, limit, length) {
+    let remain = limit -length;
+    if(remain > 0) {
+        const isNormal = true;
+        const text = "残り" + remain + "文字入力可能";
+        changeText(id, text);
+        changeClass(id, isNormal);
+    } else if(remain === 0) {
+        const isNormal = true;
+        const text = "入力できる最大文字数です。";
+        changeText(id, text);
+        changeClass(id, isNormal);
+    } else {
+        const isNormal = false;
+        const text = "最大文字数を超えています！";
+        changeText(id, text);
+        changeClass(id, isNormal);
+    }
+}
+//ここまで
+
+//共通の関数
 function changeClass(id, isNormal) {
     let normalStatus = "has-text-primary";
     let abnormalStatus = "has-text-danger";
@@ -94,3 +127,34 @@ function changeClass(id, isNormal) {
 function changeText(id, text) {
     $(id).text(text);
 }
+//ここまで
+
+//ファイルの関数
+function getFileSize(fileInfo) {
+    let size = fileInfo.size/1024/1024;
+    
+    let text = size + "MB";
+    return text;
+}
+
+function getFileName(fileInfo) {
+    let fileName = fileInfo.name;
+    return fileName;
+}
+
+function checkFile(fileInfo) {
+
+}
+
+function displayFileSize(id, size) {
+
+}
+
+function displayFileName(id, size) {
+
+}
+
+function displayCanUpload(id, size, type) {
+
+}
+//ここまで
