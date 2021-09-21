@@ -28,12 +28,11 @@ $(function() {
     });
 
     $("#file").change(function() {
+        //TODO: error時の対応も記述
         let fileData = this.files[0];
-        let fileSize = getFileSize(fileData);
-        let fileName = getFileName(fileData);
-        console.log(fileData.type);
-        console.log(fileSize);
-        console.log(fileName);
+        setFileName("#file_name", fileData);
+        setFileSize("#file_size", fileData);
+        checkSize(getFileSize(fileData));
     });
 });
 
@@ -132,9 +131,9 @@ function changeText(id, text) {
 //ファイルの関数
 function getFileSize(fileInfo) {
     let size = fileInfo.size/1024/1024;
-    
-    let text = size + "MB";
-    return text;
+    size = Math.ceil(size * 1000)/1000;
+    let fileSize = size + "MB";
+    return fileSize;
 }
 
 function getFileName(fileInfo) {
@@ -142,19 +141,43 @@ function getFileName(fileInfo) {
     return fileName;
 }
 
-function checkFile(fileInfo) {
-
+function setFileSize(id, fileInfo) {
+    let fileSize = getFileSize(fileInfo);
+    $(id).text(fileSize);
 }
 
-function displayFileSize(id, size) {
-
+function setFileName(id, fileInfo) {
+    let fileName = getFileName(fileInfo);
+    $(id).text(fileName);
 }
 
-function displayFileName(id, size) {
-
+function checkSize(fileSize) {
+    let rowFileSize = fileSize.slice(0, -2);
+    rowFileSize = Number(rowFileSize);
+    
+    if(rowFileSize > 5.0) {
+        const isDisabled = true;
+        const id = "#post_memo";
+        const isNormal = false;
+        switchDisabled(id, isDisabled);
+        changeText("#file_size", "5.0MBを超えています!");
+        changeClass("#file_size", isNormal);
+    } else {
+        const isDisabled = false;
+        const id = "#post_memo";
+        const isNormal = true;
+        switchDisabled(id, isDisabled);
+        changeClass("#file_size", isNormal);
+    }
 }
 
-function displayCanUpload(id, size, type) {
-
+//ここまで
+//ボタンの関数
+function switchDisabled(id, isDisabled) {
+    if(isDisabled) {
+        $(id).attr("disabled", true);
+    } else {
+        $(id).attr("disabled", false);
+    }
 }
 //ここまで
