@@ -59,29 +59,30 @@
                     </div>
                     <div class="field">
                         <label for="comment">カテゴリ<br><span class="has-text-danger">*必須 最大5個 1カテゴリ30文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_text">残り5個入力可能</span>
+                        <span class="has-text-primary" id="count_category">残り5個入力可能</span>
+                        <span id="disp_category"></span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトル" value="MVCでわからなかったところ, php, Laravel, つまづき, MVC">
+                                    <input id="category" type="text" class="input is-success" placeholder="タイトル" value="MVCでわからなかったところ, php, Laravel, つまづき, MVC">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="field">
                         <label for="comment">タイトル<br><span class="has-text-danger">*必須 最大100文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_text">残り100文字入力可能</span>
+                        <span class="has-text-primary" id="count_title">残り100文字入力可能</span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" class="input is-success" placeholder="タイトル" value="MVCでわからなかったところ">
+                                    <input type="text" id="title" class="input is-success" placeholder="タイトル" value="MVCでわからなかったところ">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="field">
                         <label for="comment">メモ<br><span class="has-text-danger">*必須 最大2000文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_text">残り2000文字入力可能</span>
+                        <span class="has-text-primary" id="count_memo">残り2000文字入力可能</span>
                         <div class="control has-text-centered">
                             <div class="field">
                                 <div class="control">
@@ -92,7 +93,11 @@
                     </div>
                     <span class="mt-5">画像</span>
                     <p>*任意<span class="has-text-danger"> -.-MBまでの画像(JPEG形式, PNG形式)をアップロード可能</span></p>
-                    <div class="preview">
+                    <span id="file_size"></span>
+                    <div class="preview_field">
+                        <img id="preview" src="">
+                    </div>
+                    <div class="uploaded_preview">
                         <div class="mt-5">
                             <figure class="image is-256x256">
                                 <img src="./images/mvc.png" alt="参考画像">
@@ -110,12 +115,12 @@
                                     画像を選択
                                 </span>
                             </span>
-                            <span class="file-name">
+                            <span id="file_name" class="file-name">
                                 mvc.png
                             </span>
                         </label>
                     </div>
-                    <button class="button is-primary m-2">
+                    <button id="post_memo" class="button is-primary m-2">
                         <a href="./log_detail.html" class="is-size-4 has-text-white"><i class="far fa-edit"></i>更新</a>
                     </button>
                 </div>
@@ -144,6 +149,7 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-    <script src="./js/log_form.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/log_update.js"></script>
 </body>
 </html>

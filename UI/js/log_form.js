@@ -6,7 +6,7 @@ $(function() {
         checkElement(textToArray);
         let dispText = arrayToText(textToArray);
         $("#disp_category").text(dispText);
-    })
+    });
 
     $("#title").keyup(function() {
         const id = "#count_title";
