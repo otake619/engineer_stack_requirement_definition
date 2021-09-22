@@ -28,6 +28,7 @@ $(function() {
         setFileName("#file_name", fileData);
         setFileSize("#file_size", fileData);
         checkSize(getFileSize(fileData));
+        setPreview("#preview", getUrl(fileData));
     });
 });
 
@@ -76,7 +77,6 @@ function checkElement(array) {
         } else {
             const isNormal = true;
             changeClass(id, isNormal);
-            console.log(array);
         }
     }
     countCategory(array);
@@ -166,6 +166,14 @@ function checkSize(fileSize) {
     }
 }
 
+function setPreview(id, url) {
+    $(id).attr("src", url);
+}
+
+function getUrl(fileData) {
+    let blobUrl = window.URL.createObjectURL(fileData);
+    return blobUrl;
+}
 //ここまで
 //ボタンの関数
 function switchDisabled(id, isDisabled) {
@@ -176,3 +184,5 @@ function switchDisabled(id, isDisabled) {
     }
 }
 //ここまで
+
+
