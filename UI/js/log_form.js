@@ -1,3 +1,17 @@
+const editor = new EditorJS({ 
+    holder: 'editorjs', 
+    tools: { 
+        header: {
+            class: Header, 
+            inlineToolbar: ['link'] 
+        }, 
+        list: { 
+            class: List, 
+            inlineToolbar: true 
+        } 
+    }, 
+})
+
 $(function() {
     $("#category").keyup(function() {
         const separator = ",";
