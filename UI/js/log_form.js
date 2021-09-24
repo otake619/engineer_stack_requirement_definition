@@ -18,8 +18,16 @@ $(function() {
         let inputText = $(this).val();
         let textToArray = separateText(separator, inputText);
         checkElement(textToArray);
-        let dispText = arrayToText(textToArray);
-        $("#disp_category").text(dispText);
+        //let dispText = arrayToText(textToArray);
+        //$("#disp_category").text(dispText);
+        // textToArray.forEach(function(element) {
+        //     let category = element;
+        //     let label = createElement("i", "fas fa-tape", "");
+        //     let span = createElement("span", "tag is-primary", category);
+        //     label = label.html(span);
+        //     $("#disp_category").html(label);
+        // });
+        
     });
 
     $("#title").keyup(function() {
@@ -95,6 +103,11 @@ function checkElement(array) {
     }
     countCategory(array);
     return array;
+}
+
+function createElement(tag, type, text) {
+    let element = $(`<${tag}>`, {class:type, text: text});
+    return element;
 }
 //ここまで
 
