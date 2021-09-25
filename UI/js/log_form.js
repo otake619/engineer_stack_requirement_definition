@@ -17,7 +17,10 @@ $(function() {
         const separator = ",";
         let inputText = $(this).val();
         let textToArray = separateText(separator, inputText);
-        checkElement(textToArray);
+        let array = checkElement(textToArray);
+
+        const test = inputText.indexOf(",");
+        console.log(test);
         //let dispText = arrayToText(textToArray);
         //$("#disp_category").text(dispText);
         // textToArray.forEach(function(element) {
@@ -27,7 +30,16 @@ $(function() {
         //     label = label.html(span);
         //     $("#disp_category").html(label);
         // });
-        
+        // let label = [];
+        // array.forEach(function(element) {
+        //     let category = createElement("i", "fas fa-tape tag is-primary", element);
+        //     label.push(category);
+        // });
+
+        // for(let i=0; i<label.length; i++) {
+        //     $("#disp_category").append(label[i]);
+        // }
+
     });
 
     $("#title").keyup(function() {
