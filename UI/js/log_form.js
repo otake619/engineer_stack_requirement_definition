@@ -18,9 +18,8 @@ $(function() {
         let inputText = $(this).val();
         let textToArray = separateText(separator, inputText);
         let array = checkElement(textToArray);
-
-        const test = inputText.indexOf(",");
-        console.log(test);
+        let dispText = arrayToText(textToArray);
+        $("#disp_category").html(dispText);
         //let dispText = arrayToText(textToArray);
         //$("#disp_category").text(dispText);
         // textToArray.forEach(function(element) {
