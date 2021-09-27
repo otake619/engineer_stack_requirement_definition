@@ -40,13 +40,8 @@ $(function() {
         let textToArray = separateText(separator, inputText);
         let array = checkElement(textToArray);
         let dispText = arrayToText(textToArray);
-        let tag = [];
-        for(let i=0; i<array.length; i++) {
-            let element = createElement("i", "fas fa-tape tag is-light mr-1", array[i]);
-            tag.push(element);
-        }
-        console.log(tag);
-        $("#disp_category").html(tag);
+        let tags = pushTag(array);
+        $("#disp_category").html(tags);
     });
 
     $("#title").keyup(function() {
@@ -105,7 +100,7 @@ function countCategory(categoryArray) {
 
 function checkElement(array) {
     const id = "#count_category";
-    
+
     for(let i=0;i<array.length;i++) {
         if(array[i] === '' || array[i].length === 0) {
             array.splice(i, 1);
@@ -127,6 +122,21 @@ function checkElement(array) {
 function createElement(tag, type, text) {
     let element = $(`<${tag}>`, {class:type, text: text});
     return element;
+}
+
+function pushTag(array) {
+    let tags = [];
+    //カテゴリの要素数が5より上の場合は処理を中断
+    if(array == undefined) {
+        return;
+    } else if(array.length > 5) {
+        return;
+    }
+    for(let i=0; i<array.length; i++) {
+        let element = createElement("i", "fas fa-tape tag is-primary mr-1 mb-1", array[i]);
+        tags.push(element);
+    }
+    return tags;
 }
 //ここまで
 
