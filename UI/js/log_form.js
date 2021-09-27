@@ -40,26 +40,13 @@ $(function() {
         let textToArray = separateText(separator, inputText);
         let array = checkElement(textToArray);
         let dispText = arrayToText(textToArray);
-        $("#disp_category").html(dispText);
-        //let dispText = arrayToText(textToArray);
-        //$("#disp_category").text(dispText);
-        // textToArray.forEach(function(element) {
-        //     let category = element;
-        //     let label = createElement("i", "fas fa-tape", "");
-        //     let span = createElement("span", "tag is-primary", category);
-        //     label = label.html(span);
-        //     $("#disp_category").html(label);
-        // });
-        // let label = [];
-        // array.forEach(function(element) {
-        //     let category = createElement("i", "fas fa-tape tag is-primary", element);
-        //     label.push(category);
-        // });
-
-        // for(let i=0; i<label.length; i++) {
-        //     $("#disp_category").append(label[i]);
-        // }
-
+        let tag = [];
+        for(let i=0; i<array.length; i++) {
+            let element = createElement("i", "fas fa-tape tag is-light mr-1", array[i]);
+            tag.push(element);
+        }
+        console.log(tag);
+        $("#disp_category").html(tag);
     });
 
     $("#title").keyup(function() {
