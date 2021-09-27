@@ -26,6 +26,9 @@ const editor = new EditorJS({
         },
         table: {
             class: Table 
+        },
+        Marker: {
+            class: Marker 
         }
     }, 
 })
