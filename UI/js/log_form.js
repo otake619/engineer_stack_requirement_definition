@@ -8,7 +8,25 @@ const editor = new EditorJS({
         list: { 
             class: List, 
             inlineToolbar: true 
-        } 
+        },
+        checklist: {
+            class: Checklist
+        },
+        quote: {
+            class: Quote 
+        },
+        embed: {
+            class: Embed 
+        },
+        image: {
+            class: SimpleImage
+        },
+        code: {
+            class: CodeTool
+        },
+        table: {
+            class: Table 
+        }
     }, 
 })
 
