@@ -1,5 +1,5 @@
 const editor = new EditorJS({ 
-    holder: 'editorjs', 
+    holder: 'editor', 
     tools: { 
         header: {
             class: Header, 

@@ -80,40 +80,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="field">
-                        <label for="comment">メモ<br><span class="has-text-danger">*必須 最大2000文字まで</span></label><br>
-                        <span class="has-text-primary" id="count_memo">残り2000文字入力可能</span>
-                        <div class="control has-text-centered">
-                            <div class="field">
-                                <div class="control">
-                                    <textarea id="memo" class="textarea is-primary" type="text" placeholder="メモを入力" rows="10" maxlength="2000"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="editorjs" style="border: 1px solid #00d1b2;">
-                    </div>
-                    <span class="mt-5">ファイル</span>
-                    <p>*任意<span class="has-text-danger"> 5.0MBまでのファイル(JPEG形式, PNG形式)をアップロード可能</span></p>
-                    <span id="file_size"></span>
-                    <div class="preview_field">
-                        <img id="preview" src="">
-                    </div>
-                    <div class="file has-name mb-5" id="file_field">
-                        <label class="file-label">
-                            <input id="file" class="file-input" type="file" name="resume" accept=".jpg, .jpeg, .png">
-                            <span class="file-cta">
-                                <span class="file-icon">
-                                    <i class="fas fa-upload"></i>
-                                </span>
-                                <span class="file-label">
-                                    ファイルを選択
-                                </span>
-                            </span>
-                            <span id="file_name" class="file-name">
-                                ファイルを選択してください
-                            </span>
-                        </label>
+                    <div class="editor_field">
+                        <label for="editor">メモ<br><span>*任意</span></label>
+                        <div id="editor" style="border: 1px solid #00d1b2; border-radius: 4px;"></div>
                     </div>
                     <button id="post_memo" class="button is-primary m-2">
                         <p class="is-size-4"><i class="fas fa-save"></i>保存</p>
