@@ -29,7 +29,11 @@ const editor = new EditorJS({
         },
         Marker: {
             class: Marker 
-        }
+        },
+        inlineCode: {
+            class: InlineCode,
+            shortcut: 'CMD+SHIFT+M',
+        },
     }, 
 })
 
