@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>カテゴリー一覧画面</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+            </div>
+        </nav>
+    </section>
+    <section class="content">
+        <h4 class="title has-text-centered">カテゴリー一覧</h4>
+        <div class="columns">
+            <div class="select-database column is-one-quarter m-3">
+                <a href="./admin_home.html">
+                    <button class="button is-primary is-outlined is-fullwidth"><i class="fas fa-home"></i>ホーム</button>
+                </a>
+                <a href="./admin_users.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-users"></i>ユーザー一覧</button>
+                </a>
+                <a href="./admin_category.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-tape"></i>カテゴリ一覧</button>
+                </a>
+                <a href="./admin_heading.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-heading"></i>タイトル一覧</button>
+                </a>
+                <a href="./admin_memo.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-file-code"></i>メモ一覧</button>
+                </a>
+            </div>
+            <div class="category-info">
+                <table class="table">
+
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>
