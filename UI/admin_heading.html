@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>管理者画面 ホーム</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-size-3 has-text-weight-semibold has-text-primary" href="">
+                    EngineerStack
+                </a>
+            </div>
+        </nav>
+    </section>
+    <section class="content">
+        <h4 class="title has-text-centered">ユーザー一覧</h4>
+        <div class="columns">
+            <div class="select-database column is-one-quarter m-3">
+                <a href="./admin_home.html">
+                    <button class="button is-primary is-outlined is-fullwidth"><i class="fas fa-home"></i>ホーム</button>
+                </a>
+                <a href="./admin_users.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-users"></i>ユーザー一覧</button>
+                </a>
+                <a href="./admin_category.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-tape"></i>カテゴリ一覧</button>
+                </a>
+                <a href="./admin_heading.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-heading"></i>タイトル一覧</button>
+                </a>
+                <a href="./admin_memo.html">
+                    <button class="button is-primary is-outlined is-fullwidth mt-3"><i class="fas fa-file-code"></i>メモ一覧</button>
+                </a>
+            </div>
+            <div class="user-info column is-three-quarter">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>
+                                id
+                            </th>
+                            <th>
+                                user_id
+                            </th>
+                            <th>
+                                E-mail
+                            </th>
+                            <th>
+                                作成日
+                            </th>
+                            <th>
+                                最終ログイン
+                            </th>
+                            <th>
+                                ステータス
+                            </th>
+                            <th>
+                                利用停止
+                            </th>
+                            <th>
+                                アカウント削除
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                1
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                通常
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                2
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                通常
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr class="has-background-grey-light">
+                            <th>
+                                3
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                退会済み
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                4
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                利用停止
+                            </th>
+                            <th>
+                                <i class="fas fa-plus-circle has-text-primary"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                5
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                通常
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                6
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                通常
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr class="has-background-grey-light">
+                            <th>
+                                7
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                退会済み
+                            </th>
+                            <th>
+                                <i class="fas fa-minus-circle has-text-warning"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                8
+                            </th>
+                            <th>
+                                otake619
+                            </th>
+                            <th>
+                                ryoheiotake@gmail.com
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                2021/10/31 12:20:24
+                            </th>
+                            <th>
+                                利用停止
+                            </th>
+                            <th>
+                                <i class="fas fa-plus-circle has-text-primary"></i>
+                            </th>
+                            <th>
+                                <i class="fas fa-trash-alt has-text-danger"></i>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/navbar.js"></script>
+</body>
+</html>
