@@ -1,0 +1,3 @@
+memosテーブルとcategoriesテーブルの間にmemos_categoryテーブルを修正する。
+プルリクエストを作成する。
+
